@@ -1,0 +1,57 @@
+
+git init
+git branch -M main
+git add .
+git commit -m "commit message"
+
+transitive dependencies-dependencies installed which required by some other dependencies and so on.
+
+Parcel/bundler
+-Dev build 
+-Local server 
+-HMR= hort module replacement 
+-File watching algorithm
+-caching
+-Minification
+-Bundling
+-Compressing
+-Image optimisation
+-Differntial bunlding(supports older browser)
+-Tree shaking(dlt unused codes)
+
+config driven UI
+
+Higher order functions-
+A funnction which takes another function as an argument or returns a funtion from it is a higher order funtion.
+
+map filter reduce
+
+Hooks
+ "hooks" refer to functions that allow developers to use state and other React features in functional components. Before the introduction of hooks, state and other React features were primarily used in class components.
+
+
+
+how react is so fast?
+-->reacts do efficient DOM manipulation which can find out the diff and update the or re-render the UI 
+-->Reconciliation algorithm/react fibre-->
+
+The reconciliation algorithm is a fundamental part of React's virtual DOM (Document Object Model) diffing process, which is responsible for efficiently updating the actual DOM to reflect changes in the application's state.
+
+Here's an overview of how the reconciliation algorithm works in React:
+
+1. **Virtual DOM Representation**: React maintains a lightweight representation of the actual DOM known as the virtual DOM. This virtual DOM is a tree structure that mirrors the structure of the real DOM.
+
+2. **Component Rendering**: When a component's state or props change, React re-renders the component and generates a new virtual DOM representation for the entire component tree.
+
+3. **Diffing**: React performs a process called "diffing" to compare the new virtual DOM with the previous one. It identifies the differences (or "diffs") between the two virtual DOM trees.
+
+4. **reconciliation
+The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM."
+— for example, in the case of a browser application, it's translated to a set of DOM operations. When the app is updated (usually via setState), a new tree is generated. The new tree is diffed with the previous tree to compute which operations are needed to update the rendered app.
+
+5. **Minimal Updates**: React's reconciliation algorithm aims to minimize the number of changes needed to update the DOM. It tries to apply only the necessary updates to the DOM elements, rather than re-rendering the entire component tree.
+
+6. **Keyed Elements**: React uses the "key" prop to optimize the reconciliation process, especially when dealing with lists of elements. Keys help React identify which elements have changed, been added, or been removed, allowing for more efficient updates.
+
+Overall, the reconciliation algorithm is a crucial part of React's performance optimization strategy. By efficiently updating the DOM based on changes in the virtual DOM, React ensures that user interfaces remain responsive and performant, even in complex applications with dynamic content.
